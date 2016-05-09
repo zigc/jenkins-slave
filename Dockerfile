@@ -19,6 +19,9 @@ RUN apt-get update &&\
 RUN adduser --quiet jenkins &&\
     echo "jenkins:jenkins" | chpasswd
 
+# Create symbolic link as expected by master jenkins.
+RUN ln -s /usr/lib/jvm/java-8-openjdk-amd64/* /home/jenkins/opt/jdk1.8.0_5
+
 # Standard SSH port
 EXPOSE 22
 
