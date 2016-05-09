@@ -12,7 +12,7 @@ RUN apt-get update &&\
 # Install JDK 8 (latest edition)
 RUN apt-get update &&\
     apt-get install -y openjdk-8-jdk &&\
-	apt-get install -y maven &&\
+    apt-get install -y maven &&\
     apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # Set user jenkins to the image
